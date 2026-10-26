@@ -1,0 +1,2 @@
+<script setup lang="ts">defineProps<{loading?:boolean;error?:string;empty?:boolean;emptyText?:string}>();defineEmits(['retry'])</script>
+<template><div v-if="loading" class="loading-block" role="status"><span class="loading-square" />正在加载…</div><div v-else-if="error" class="error-block" role="alert"><span>{{error}}</span><button class="btn" @click="$emit('retry')">重新加载</button></div><div v-else-if="empty" class="empty-block">{{emptyText||'暂无记录'}}</div><slot v-else /></template>

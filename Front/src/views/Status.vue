@@ -1,0 +1,2 @@
+<script setup lang="ts">import {useRoute} from 'vue-router';import {useAuth} from '../stores/auth';const route=useRoute(),auth=useAuth()</script>
+<template><section class="status-page"><span class="status-code">{{route.path==='/403'?'403':'404'}}</span><h1>{{route.path==='/403'?'此页面暂不可访问':'页面不存在'}}</h1><p class="muted">{{route.path==='/403'?'你的角色未分配此功能权限，请联系系统管理员。':'页面地址可能已变更，请返回工作空间。'}}</p><RouterLink :to="auth.home" class="btn primary">返回工作空间</RouterLink></section></template>

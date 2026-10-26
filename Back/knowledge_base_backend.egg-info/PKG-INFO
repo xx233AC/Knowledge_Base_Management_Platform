@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: knowledge-base-backend
+Version: 0.1.0
+Requires-Python: <3.14,>=3.12
+Requires-Dist: fastapi<1,>=0.115
+Requires-Dist: uvicorn[standard]<1,>=0.30
+Requires-Dist: sqlalchemy<2.1,>=2.0
+Requires-Dist: psycopg[binary]<4,>=3.2
+Requires-Dist: alembic<2,>=1.14
+Requires-Dist: pydantic-settings<3,>=2.7
+Requires-Dist: pyjwt<3,>=2.10
+Requires-Dist: pwdlib[argon2]<1,>=0.2
+Requires-Dist: python-multipart<1,>=0.0.20
+Requires-Dist: httpx<1,>=0.28
+Requires-Dist: redis<7,>=5.2
+Requires-Dist: minio<8,>=7.2
+Requires-Dist: pymilvus<2.6,>=2.5
+Requires-Dist: python-docx<2,>=1.1
+Requires-Dist: cryptography<48,>=44
+Requires-Dist: numpy<3,>=1.26
+Provides-Extra: embedding
+Requires-Dist: torch<3,>=2.6; extra == "embedding"
+Requires-Dist: transformers<5,>=4.48; extra == "embedding"
+Requires-Dist: sentencepiece<1,>=0.2; extra == "embedding"
+Provides-Extra: dev
+Requires-Dist: pytest<10,>=8.3; extra == "dev"
+Requires-Dist: ruff<1,>=0.9; extra == "dev"
+Requires-Dist: pytest-cov<8,>=6; extra == "dev"
